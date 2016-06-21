@@ -10,16 +10,17 @@ import UIKit
 
 class QueryDetailViewController: UIViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = APP_BGCOLOR
-        
-        
+        createNavBarView()
+
     }
 
-    func createNavBar(){
-        let navBarView = navBar
+    func createNavBarView(){
+        let navBarView = UIView(frame: CGRectMake(0, 0,SCREEN_WIDTH, NAVBAR_HEIGHT))
         navBarView.backgroundColor = APP_RED
         self.view.addSubview(navBarView)
         
@@ -40,9 +41,6 @@ class QueryDetailViewController: UIViewController {
 
     func backSearchVC(){
         self.navigationController?.popViewControllerAnimated(true)
-    }
-    override func viewWillAppear(animated: Bool) {
-        self.createNavBar()
     }
     
     override func didReceiveMemoryWarning() {

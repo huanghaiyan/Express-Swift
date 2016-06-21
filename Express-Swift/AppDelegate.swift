@@ -22,8 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let searchVC = UINavigationController(rootViewController:SearchViewController())
         let historyVC = UINavigationController(rootViewController:HistoryViewController())
         let expressPhoneVC = UINavigationController(rootViewController:ExpressPhoneViewController())
-        
-        
+
         tabBarController.viewControllers = [searchVC,historyVC,expressPhoneVC]
         
         let searchTabBarItem = UITabBarItem(title:"查询快递",image: UIImage(named:"icon_tab_query.png"),selectedImage:UIImage(named: "icon_tab_query_sel.png"))

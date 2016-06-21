@@ -14,11 +14,11 @@ class BarCodeViewController: UIViewController {
         super.viewDidLoad()
 
         self.view.backgroundColor = APP_BGCOLOR
-       // self.createNavBar()
+        createNavBarView()
     }
     
-    func createNavBar(){
-        let navBarView = navBar
+    func createNavBarView(){
+        let navBarView = UIView(frame: CGRectMake(0, 0,SCREEN_WIDTH, NAVBAR_HEIGHT))
         navBarView.backgroundColor = APP_RED
         self.view.addSubview(navBarView)
         
@@ -54,9 +54,6 @@ class BarCodeViewController: UIViewController {
             UIApplication.sharedApplication().openURL(url!)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.createNavBar()
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

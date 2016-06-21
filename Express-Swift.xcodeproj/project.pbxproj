@@ -10,6 +10,11 @@
 		0117182A1D10EF9000DADBF6 /* ExpressCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */; };
 		0117182C1D10FE3C00DADBF6 /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */; };
 		0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */; };
+		0117183E1D119C7A00DADBF6 /* CompanyModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117183D1D119C7A00DADBF6 /* CompanyModel.swift */; };
+		011718411D11A02E00DADBF6 /* D3Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011718401D11A02E00DADBF6 /* D3Model.swift */; };
+		017E4F231D129C8D00958613 /* ExpressCompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */; };
+		017E4F241D129C8D00958613 /* ExpressCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */; };
+		0196FB611D17CABD0005600E /* ExpressPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196FB601D17CABD0005600E /* ExpressPhoneCell.swift */; };
 		01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */; };
 		01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0F1D0EA15800E131FD /* ViewController.swift */; };
 		01CCEA131D0EA15800E131FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CCEA111D0EA15800E131FD /* Main.storyboard */; };
@@ -145,6 +150,11 @@
 		011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCompanyVC.swift; sourceTree = "<group>"; };
 		0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
 		0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDetailViewController.swift; sourceTree = "<group>"; };
+		0117183D1D119C7A00DADBF6 /* CompanyModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompanyModel.swift; sourceTree = "<group>"; };
+		011718401D11A02E00DADBF6 /* D3Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = D3Model.swift; sourceTree = "<group>"; };
+		017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCompanyCell.swift; sourceTree = "<group>"; };
+		017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpressCompanyCell.xib; sourceTree = "<group>"; };
+		0196FB601D17CABD0005600E /* ExpressPhoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPhoneCell.swift; sourceTree = "<group>"; };
 		01CCEA0A1D0EA15800E131FD /* Express-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Express-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CCEA0F1D0EA15800E131FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -292,6 +302,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0117183C1D119C6000DADBF6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0117183D1D119C7A00DADBF6 /* CompanyModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0117183F1D11A01800DADBF6 /* D3Json */ = {
+			isa = PBXGroup;
+			children = (
+				011718401D11A02E00DADBF6 /* D3Model.swift */,
+			);
+			path = D3Json;
+			sourceTree = "<group>";
+		};
 		01CCEA011D0EA15800E131FD = {
 			isa = PBXGroup;
 			children = (
@@ -313,6 +339,8 @@
 		01CCEA0C1D0EA15800E131FD /* Express-Swift */ = {
 			isa = PBXGroup;
 			children = (
+				0117183F1D11A01800DADBF6 /* D3Json */,
+				0117183C1D119C6000DADBF6 /* Model */,
 				01CCEA211D0EA95900E131FD /* Search */,
 				01CCEA201D0EA95900E131FD /* History */,
 				01CCEA1F1D0EA95900E131FD /* ExpressPhone */,
@@ -333,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				01CCEA261D0EA9E500E131FD /* ExpressPhoneViewController.swift */,
+				0196FB601D17CABD0005600E /* ExpressPhoneCell.swift */,
 			);
 			path = ExpressPhone;
 			sourceTree = "<group>";
@@ -351,6 +380,8 @@
 				01CCEA221D0EA9AE00E131FD /* SearchViewController.swift */,
 				0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */,
 				011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */,
+				017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */,
+				017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */,
 				0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */,
 			);
 			path = Search;
@@ -691,6 +722,7 @@
 				01CCEAC11D0FB9F300E131FD /* vancl.png in Resources */,
 				01CCEAA71D0FB9F300E131FD /* jixianda.png in Resources */,
 				01CCEAA51D0FB9F300E131FD /* jiayunmeiwuliu.png in Resources */,
+				017E4F241D129C8D00958613 /* ExpressCompanyCell.xib in Resources */,
 				01CCEAFD1D0FBE8900E131FD /* barsacn_left_bottom@2x.png in Resources */,
 				01CCEAB91D0FB9F300E131FD /* suer.png in Resources */,
 				01CCEA131D0EA15800E131FD /* Main.storyboard in Resources */,
@@ -766,13 +798,17 @@
 			files = (
 				01CCEA231D0EA9AE00E131FD /* SearchViewController.swift in Sources */,
 				01CCEA271D0EA9E500E131FD /* ExpressPhoneViewController.swift in Sources */,
+				0196FB611D17CABD0005600E /* ExpressPhoneCell.swift in Sources */,
 				01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */,
 				01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */,
+				017E4F231D129C8D00958613 /* ExpressCompanyCell.swift in Sources */,
+				011718411D11A02E00DADBF6 /* D3Model.swift in Sources */,
 				0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */,
 				01CCEA321D0F8E5D00E131FD /* GlobalConst.swift in Sources */,
 				0117182C1D10FE3C00DADBF6 /* BarCodeViewController.swift in Sources */,
 				0117182A1D10EF9000DADBF6 /* ExpressCompanyVC.swift in Sources */,
 				01CCEA251D0EA9BE00E131FD /* HistoryViewController.swift in Sources */,
+				0117183E1D119C7A00DADBF6 /* CompanyModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,18 +8,19 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
-
+class SearchViewController: UIViewController,ExpressCompanyDelegate{
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+       
+        self.navigationController?.navigationBarHidden = true
         self.view.backgroundColor = APP_BGCOLOR
-        
-        self.createView()
+        createNavBarView()
+        createView()
         
     }
     func createNavBarView(){
-        let navBarView = navBar
+        let navBarView = UIView(frame: CGRectMake(0, 0, SCREEN_WIDTH, NAVBAR_HEIGHT))
         navBarView.backgroundColor = APP_RED
         self.view.addSubview(navBarView)
         let leftBtn = UIButton()
@@ -88,6 +89,7 @@ class SearchViewController: UIViewController {
         
         let companyLab = UILabel()
         companyLab.frame = CGRectMake(45, 0, SCREEN_WIDTH-40-30-70, 40)
+        companyLab.tag = 100
         companyLab.text = "请选择快递公司"
         companyLab.textColor = UIColor.lightGrayColor()
         companyBtn.addSubview(companyLab)
@@ -116,16 +118,15 @@ class SearchViewController: UIViewController {
     
     func chooseExpressCompany(){
         let expressCompanyVC = ExpressCompanyVC()
+        expressCompanyVC.delegate = self
         self.presentViewController(expressCompanyVC, animated: true, completion: nil)
         
     }
     
-    func queryExpress(){
-    
-        let queryDetailVC = QueryDetailViewController()
-        self.hidesBottomBarWhenPushed = true
-        self.navigationController?.pushViewController(queryDetailVC, animated: true)
-        self.hidesBottomBarWhenPushed = false;
+    func sendValue(value:String?){
+        let companyLab = self.view.viewWithTag(100) as! UILabel
+        companyLab.textColor = UIColor.blackColor()
+        companyLab.text = value
     }
 
     func aboutApp(){
@@ -139,10 +140,53 @@ class SearchViewController: UIViewController {
         UIApplication.sharedApplication().openURL(url!)
     }
     
-    override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true
-        self.createNavBarView()
+    func queryExpress(){
+        let com = "zto"
+        
+        let no = "404711955789"
+        
+        
+        //创建NSURL对象
+        let urlString:String = NSString(format:"http://v.juhe.cn/exp/index?key=\(APP_KEY)&com=\(com)&no=\(no)" ) as String
+        let url:NSURL = NSURL(string: urlString)!
+        //创建请求对象
+        let request:NSURLRequest = NSURLRequest(URL: url)
+        let session = NSURLSession.sharedSession()
+        
+        let dataTask = session.dataTaskWithRequest(request,completionHandler: {(data, response, error) -> Void in
+        
+            if error != nil{
+                print(error?.code)
+                print(error?.description)
+            }else{
+                let json : AnyObject! = try? NSJSONSerialization
+                    .JSONObjectWithData(data!, options:NSJSONReadingOptions.AllowFragments)
+                print("GET: -> \(json)")
+                let queryDetailVC = QueryDetailViewController()
+                self.hidesBottomBarWhenPushed = true
+                self.navigationController?.pushViewController(queryDetailVC, animated: true)
+                self.hidesBottomBarWhenPushed = false;
+
+            }
+        })as NSURLSessionTask
+        
+        //使用resume方法启动任务
+        dataTask.resume()
+        
+        
+        
+        
+        
     }
+    
+    func DetailExpress(json:AnyObject){
+        let queryDetailVC = QueryDetailViewController()
+      //  queryDetailVC.json = josn
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(queryDetailVC, animated: true)
+        self.hidesBottomBarWhenPushed = false;
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

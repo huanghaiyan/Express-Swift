@@ -10,14 +10,14 @@ import Foundation
 import UIKit
 
 
+let APP_KEY = "cd77edb3f9bbbac2ebe55e311f9e1714"
 
 //屏幕的宽度，高度
 let SCREEN_WIDTH = UIScreen.mainScreen().bounds.size.width
 
 let SCREEN_HEIGHT = UIScreen.mainScreen().bounds.size.height
-
-//导航栏高度
-let navBar = UIView(frame: CGRectMake(0, 0, SCREEN_WIDTH, IS_IOS7() ? 64:44))
+//导航栏的高度
+let NAVBAR_HEIGHT = IS_IOS7() ? 64:44 as CGFloat
 
 //本地图标赋值简写
 func IMAGE(name:String)->UIImage{
