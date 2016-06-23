@@ -76,7 +76,7 @@ class ExpressCompanyVC: UIViewController {
         mTableView.separatorInset = UIEdgeInsetsZero
         mTableView.delegate = self
         mTableView.dataSource = self
-        mTableView.sectionIndexColor = UIColor.blueColor()
+//        mTableView.sectionIndexColor = UIColor.blueColor()
         self.view.addSubview(mTableView)
     }
 

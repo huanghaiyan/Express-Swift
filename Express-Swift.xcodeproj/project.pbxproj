@@ -15,6 +15,8 @@
 		017E4F231D129C8D00958613 /* ExpressCompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */; };
 		017E4F241D129C8D00958613 /* ExpressCompanyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */; };
 		0196FB611D17CABD0005600E /* ExpressPhoneCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196FB601D17CABD0005600E /* ExpressPhoneCell.swift */; };
+		0196FB641D1919C40005600E /* QueryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196FB621D1919C40005600E /* QueryDetailCell.swift */; };
+		0196FB651D1919C40005600E /* QueryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0196FB631D1919C40005600E /* QueryDetailCell.xib */; };
 		01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */; };
 		01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0F1D0EA15800E131FD /* ViewController.swift */; };
 		01CCEA131D0EA15800E131FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CCEA111D0EA15800E131FD /* Main.storyboard */; };
@@ -155,6 +157,8 @@
 		017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCompanyCell.swift; sourceTree = "<group>"; };
 		017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ExpressCompanyCell.xib; sourceTree = "<group>"; };
 		0196FB601D17CABD0005600E /* ExpressPhoneCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressPhoneCell.swift; sourceTree = "<group>"; };
+		0196FB621D1919C40005600E /* QueryDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDetailCell.swift; sourceTree = "<group>"; };
+		0196FB631D1919C40005600E /* QueryDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryDetailCell.xib; sourceTree = "<group>"; };
 		01CCEA0A1D0EA15800E131FD /* Express-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Express-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01CCEA0F1D0EA15800E131FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -379,6 +383,8 @@
 			children = (
 				01CCEA221D0EA9AE00E131FD /* SearchViewController.swift */,
 				0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */,
+				0196FB621D1919C40005600E /* QueryDetailCell.swift */,
+				0196FB631D1919C40005600E /* QueryDetailCell.xib */,
 				011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */,
 				017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */,
 				017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */,
@@ -656,6 +662,7 @@
 				01CCEAAF1D0FB9F300E131FD /* OnTrac.png in Resources */,
 				01CCEB111D0FBE8900E131FD /* no_record.png in Resources */,
 				01CCEABB1D0FB9F300E131FD /* tiantian.png in Resources */,
+				0196FB651D1919C40005600E /* QueryDetailCell.xib in Resources */,
 				01CCEA9C1D0FB9F300E131FD /* hengluwuliu.png in Resources */,
 				01CCEB181D0FBE8900E131FD /* icon_tab_history@3x.png in Resources */,
 				01CCEAC21D0FB9F300E131FD /* xinbangwuliu.png in Resources */,
@@ -801,6 +808,7 @@
 				0196FB611D17CABD0005600E /* ExpressPhoneCell.swift in Sources */,
 				01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */,
 				01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */,
+				0196FB641D1919C40005600E /* QueryDetailCell.swift in Sources */,
 				017E4F231D129C8D00958613 /* ExpressCompanyCell.swift in Sources */,
 				011718411D11A02E00DADBF6 /* D3Model.swift in Sources */,
 				0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */,

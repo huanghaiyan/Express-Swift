@@ -20,11 +20,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Express-Swift/Search/SearchViewController.swift"
-            timestampString = "488167162.575766"
+            timestampString = "488250454.730192"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "160"
-            endingLineNumber = "160"
+            startingLineNumber = "168"
+            endingLineNumber = "168"
             landmarkName = "queryExpress()"
             landmarkType = "5">
          </BreakpointContent>

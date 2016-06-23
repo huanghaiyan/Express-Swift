@@ -148,6 +148,7 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
         
         //创建NSURL对象
         let urlString:String = NSString(format:"http://v.juhe.cn/exp/index?key=\(APP_KEY)&com=\(com)&no=\(no)" ) as String
+
         let url:NSURL = NSURL(string: urlString)!
         //创建请求对象
         let request:NSURLRequest = NSURLRequest(URL: url)
@@ -162,20 +163,19 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
                 let json : AnyObject! = try? NSJSONSerialization
                     .JSONObjectWithData(data!, options:NSJSONReadingOptions.AllowFragments)
                 print("GET: -> \(json)")
-                let queryDetailVC = QueryDetailViewController()
-                self.hidesBottomBarWhenPushed = true
-                self.navigationController?.pushViewController(queryDetailVC, animated: true)
-                self.hidesBottomBarWhenPushed = false;
+                
+                let reasonStr = json["reason"]
+                print(reasonStr)
+//                let queryDetailVC = QueryDetailViewController()
+//                self.hidesBottomBarWhenPushed = true
+//                self.navigationController?.pushViewController(queryDetailVC, animated: true)
+//                self.hidesBottomBarWhenPushed = false;
 
             }
         })as NSURLSessionTask
         
         //使用resume方法启动任务
         dataTask.resume()
-        
-        
-        
-        
         
     }
     
