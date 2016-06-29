@@ -14,10 +14,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
-        self.window = UIWindow(frame:CGRectMake(0,0,SCREEN_WIDTH,SCREEN_HEIGHT))
+        self.window = UIWindow(frame:UIScreen.mainScreen().bounds)
         let tabBarController = UITabBarController()
         let searchVC = UINavigationController(rootViewController:SearchViewController())
         let historyVC = UINavigationController(rootViewController:HistoryViewController())

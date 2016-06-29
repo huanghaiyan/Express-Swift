@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0102C7BD1D21103A00B496FD /* qrcode_border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */; };
+		0102C7BF1D21242000B496FD /* qrcode_scanline_barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */; };
 		0117182A1D10EF9000DADBF6 /* ExpressCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */; };
 		0117182C1D10FE3C00DADBF6 /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */; };
 		0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */; };
@@ -18,7 +20,6 @@
 		0196FB641D1919C40005600E /* QueryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0196FB621D1919C40005600E /* QueryDetailCell.swift */; };
 		0196FB651D1919C40005600E /* QueryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0196FB631D1919C40005600E /* QueryDetailCell.xib */; };
 		01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */; };
-		01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01CCEA0F1D0EA15800E131FD /* ViewController.swift */; };
 		01CCEA131D0EA15800E131FD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CCEA111D0EA15800E131FD /* Main.storyboard */; };
 		01CCEA151D0EA15800E131FD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01CCEA141D0EA15800E131FD /* Assets.xcassets */; };
 		01CCEA181D0EA15800E131FD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01CCEA161D0EA15800E131FD /* LaunchScreen.storyboard */; };
@@ -149,6 +150,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_border@2x.png"; sourceTree = "<group>"; };
+		0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scanline_barcode@2x.png"; sourceTree = "<group>"; };
 		011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCompanyVC.swift; sourceTree = "<group>"; };
 		0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
 		0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDetailViewController.swift; sourceTree = "<group>"; };
@@ -161,7 +164,6 @@
 		0196FB631D1919C40005600E /* QueryDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QueryDetailCell.xib; sourceTree = "<group>"; };
 		01CCEA0A1D0EA15800E131FD /* Express-Swift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Express-Swift.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		01CCEA0F1D0EA15800E131FD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		01CCEA121D0EA15800E131FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01CCEA141D0EA15800E131FD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01CCEA171D0EA15800E131FD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -349,7 +351,6 @@
 				01CCEA201D0EA95900E131FD /* History */,
 				01CCEA1F1D0EA95900E131FD /* ExpressPhone */,
 				01CCEA0D1D0EA15800E131FD /* AppDelegate.swift */,
-				01CCEA0F1D0EA15800E131FD /* ViewController.swift */,
 				01CCEA311D0F8E5D00E131FD /* GlobalConst.swift */,
 				01CCEA111D0EA15800E131FD /* Main.storyboard */,
 				01CCEA141D0EA15800E131FD /* Assets.xcassets */,
@@ -491,6 +492,8 @@
 		01CCEAD31D0FBE8900E131FD /* contentImage */ = {
 			isa = PBXGroup;
 			children = (
+				0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */,
+				0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */,
 				01CCEAD41D0FBE8900E131FD /* barsacn_left_bottom.png */,
 				01CCEAD51D0FBE8900E131FD /* barsacn_left_bottom@2x.png */,
 				01CCEAD61D0FBE8900E131FD /* barsacn_left_top.png */,
@@ -690,6 +693,8 @@
 				01CCEA901D0FB9F300E131FD /* debangwuliu.png in Resources */,
 				01CCEB1C1D0FBE8900E131FD /* icon_tab_query@3x.png in Resources */,
 				01CCEB0E1D0FBE8900E131FD /* kd_deliver_icon@2x.png in Resources */,
+				0102C7BD1D21103A00B496FD /* qrcode_border@2x.png in Resources */,
+				0102C7BF1D21242000B496FD /* qrcode_scanline_barcode@2x.png in Resources */,
 				01CCEA8B1D0FB9F300E131FD /* bpost.png in Resources */,
 				01CCEAA31D0FB9F300E131FD /* jialidatong.png in Resources */,
 				01CCEB151D0FBE8900E131FD /* search_arrow.png in Resources */,
@@ -806,7 +811,6 @@
 				01CCEA231D0EA9AE00E131FD /* SearchViewController.swift in Sources */,
 				01CCEA271D0EA9E500E131FD /* ExpressPhoneViewController.swift in Sources */,
 				0196FB611D17CABD0005600E /* ExpressPhoneCell.swift in Sources */,
-				01CCEA101D0EA15800E131FD /* ViewController.swift in Sources */,
 				01CCEA0E1D0EA15800E131FD /* AppDelegate.swift in Sources */,
 				0196FB641D1919C40005600E /* QueryDetailCell.swift in Sources */,
 				017E4F231D129C8D00958613 /* ExpressCompanyCell.swift in Sources */,
