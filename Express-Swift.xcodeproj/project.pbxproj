@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0102C7BD1D21103A00B496FD /* qrcode_border@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */; };
 		0102C7BF1D21242000B496FD /* qrcode_scanline_barcode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */; };
+		0102C7E81D23CA4E00B496FD /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0102C7E71D23CA4E00B496FD /* AboutViewController.swift */; };
+		0102C7EA1D24A83700B496FD /* panda@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7E91D24A83700B496FD /* panda@2x.png */; };
+		0102C7EC1D24A84900B496FD /* thank@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0102C7EB1D24A84900B496FD /* thank@2x.png */; };
 		0117182A1D10EF9000DADBF6 /* ExpressCompanyVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */; };
 		0117182C1D10FE3C00DADBF6 /* BarCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */; };
 		0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */; };
@@ -152,6 +155,9 @@
 /* Begin PBXFileReference section */
 		0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_border@2x.png"; sourceTree = "<group>"; };
 		0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "qrcode_scanline_barcode@2x.png"; sourceTree = "<group>"; };
+		0102C7E71D23CA4E00B496FD /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		0102C7E91D24A83700B496FD /* panda@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "panda@2x.png"; sourceTree = "<group>"; };
+		0102C7EB1D24A84900B496FD /* thank@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "thank@2x.png"; sourceTree = "<group>"; };
 		011718291D10EF9000DADBF6 /* ExpressCompanyVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpressCompanyVC.swift; sourceTree = "<group>"; };
 		0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarCodeViewController.swift; sourceTree = "<group>"; };
 		0117182D1D110F7900DADBF6 /* QueryDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QueryDetailViewController.swift; sourceTree = "<group>"; };
@@ -390,6 +396,7 @@
 				017E4F211D129C8D00958613 /* ExpressCompanyCell.swift */,
 				017E4F221D129C8D00958613 /* ExpressCompanyCell.xib */,
 				0117182B1D10FE3C00DADBF6 /* BarCodeViewController.swift */,
+				0102C7E71D23CA4E00B496FD /* AboutViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -492,6 +499,8 @@
 		01CCEAD31D0FBE8900E131FD /* contentImage */ = {
 			isa = PBXGroup;
 			children = (
+				0102C7EB1D24A84900B496FD /* thank@2x.png */,
+				0102C7E91D24A83700B496FD /* panda@2x.png */,
 				0102C7BE1D21242000B496FD /* qrcode_scanline_barcode@2x.png */,
 				0102C7BC1D21103A00B496FD /* qrcode_border@2x.png */,
 				01CCEAD41D0FBE8900E131FD /* barsacn_left_bottom.png */,
@@ -669,6 +678,7 @@
 				01CCEA9C1D0FB9F300E131FD /* hengluwuliu.png in Resources */,
 				01CCEB181D0FBE8900E131FD /* icon_tab_history@3x.png in Resources */,
 				01CCEAC21D0FB9F300E131FD /* xinbangwuliu.png in Resources */,
+				0102C7EA1D24A83700B496FD /* panda@2x.png in Resources */,
 				01CCEAB01D0FB9F300E131FD /* quanchenkuaidi.png in Resources */,
 				01CCEA8C1D0FB9F300E131FD /* canpost.png in Resources */,
 				01CCEAA61D0FB9F300E131FD /* jinguangsudikuaijian.png in Resources */,
@@ -750,6 +760,7 @@
 				01CCEB171D0FBE8900E131FD /* icon_tab_history@2x.png in Resources */,
 				01CCEB0C1D0FBE8900E131FD /* icon_result_onloading@2x.png in Resources */,
 				01CCEB1F1D0FBE8900E131FD /* icon_tab_selected.png in Resources */,
+				0102C7EC1D24A84900B496FD /* thank@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -818,6 +829,7 @@
 				0117182E1D110F7900DADBF6 /* QueryDetailViewController.swift in Sources */,
 				01CCEA321D0F8E5D00E131FD /* GlobalConst.swift in Sources */,
 				0117182C1D10FE3C00DADBF6 /* BarCodeViewController.swift in Sources */,
+				0102C7E81D23CA4E00B496FD /* AboutViewController.swift in Sources */,
 				0117182A1D10EF9000DADBF6 /* ExpressCompanyVC.swift in Sources */,
 				01CCEA251D0EA9BE00E131FD /* HistoryViewController.swift in Sources */,
 				0117183E1D119C7A00DADBF6 /* CompanyModel.swift in Sources */,

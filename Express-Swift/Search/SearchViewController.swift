@@ -8,8 +8,8 @@
 
 import UIKit
 
-class SearchViewController: UIViewController,ExpressCompanyDelegate{
-    
+class SearchViewController: UIViewController,ExpressCompanyDelegate,UITextFieldDelegate{
+    var barCodeTextField = UITextField()
     override func viewDidLoad() {
         super.viewDidLoad()
        
@@ -57,10 +57,12 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
         barCodeIMG.frame = CGRectMake(0, 0, 45, 40)
         trackingNoView.addSubview(barCodeIMG)
         
-        let barCodeTextField = UITextField()
+        
         barCodeTextField.frame = CGRectMake(45, 0, SCREEN_WIDTH-40-30-70, 40)
         barCodeTextField.placeholder = "请输入快递单号"
         barCodeTextField.clearButtonMode = UITextFieldViewMode.WhileEditing
+        barCodeTextField.textColor = UIColorFromRGB(0x261A33)
+        barCodeTextField.delegate = self
         trackingNoView.addSubview(barCodeTextField)
         
         let cameraIMG = UIImageView(image: IMAGE ("icon_query_camera"))
@@ -110,7 +112,11 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
     }
     
     func handleTapGesture(){
+        
         let barCodeVC = BarCodeViewController()
+        barCodeVC.initBack { (selectStr) in
+            self.barCodeTextField.text = selectStr
+        }
         self.hidesBottomBarWhenPushed = true
          self.navigationController?.pushViewController(barCodeVC, animated: true)
         self.hidesBottomBarWhenPushed = false;
@@ -120,17 +126,19 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
         let expressCompanyVC = ExpressCompanyVC()
         expressCompanyVC.delegate = self
         self.presentViewController(expressCompanyVC, animated: true, completion: nil)
-        
     }
     
     func sendValue(value:String?){
         let companyLab = self.view.viewWithTag(100) as! UILabel
-        companyLab.textColor = UIColor.blackColor()
+        companyLab.textColor = UIColorFromRGB(0x261A33)
         companyLab.text = value
     }
 
     func aboutApp(){
-        
+        let aboutVC = AboutViewController()
+        self.hidesBottomBarWhenPushed = true
+        self.navigationController?.pushViewController(aboutVC, animated: true)
+        self.hidesBottomBarWhenPushed = false;
     }
     
     func reviewApp(){
@@ -138,6 +146,17 @@ class SearchViewController: UIViewController,ExpressCompanyDelegate{
         let url = NSURL(string: str)
         
         UIApplication.sharedApplication().openURL(url!)
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if barCodeTextField == textField {
+            barCodeTextField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        barCodeTextField.resignFirstResponder()
     }
     
     func queryExpress(){

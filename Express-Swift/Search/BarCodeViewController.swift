@@ -13,11 +13,14 @@ class BarCodeViewController: UIViewController{
     var animationImgView:UIImageView = UIImageView()
     var session = AVCaptureSession()
     
+    typealias callBackFunc = (selectStr:String)->()
+    var myFunc = callBackFunc?()
+    var stringValue:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.view.backgroundColor = COLORA(255, g: 255, b: 255, a: 0.3)
+        self.view.backgroundColor = APP_BGCOLOR
         createNavBarView()
         let boundImageView = UIImageView(frame:CGRectMake((SCREEN_WIDTH - 240)/2, 200, 240, 240))
         var image = IMAGE("qrcode_border")
@@ -155,6 +158,10 @@ class BarCodeViewController: UIViewController{
         }
     }
 
+    func initBack(mathFunction:(selectStr:String)->()){
+        myFunc = mathFunction
+    }
+    
     func backSearchVC(){
         self.navigationController?.popViewControllerAnimated(true)
     }
@@ -176,7 +183,7 @@ class BarCodeViewController: UIViewController{
 extension BarCodeViewController:AVCaptureMetadataOutputObjectsDelegate{
     func captureOutput(captureOutput: AVCaptureOutput!, didOutputMetadataObjects metadataObjects: [AnyObject]!, fromConnection connection: AVCaptureConnection!) {
         
-        var stringValue:String?
+        
         if metadataObjects.count>0 {
             
             var metadataObject = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
@@ -184,6 +191,8 @@ extension BarCodeViewController:AVCaptureMetadataOutputObjectsDelegate{
             print(stringValue)
             if stringValue != nil {
                 self.session.stopRunning()
+                myFunc!(selectStr:stringValue!)
+                self.navigationController?.popViewControllerAnimated(true)
             }
             
         }
